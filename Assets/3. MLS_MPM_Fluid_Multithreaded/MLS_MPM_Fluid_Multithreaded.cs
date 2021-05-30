@@ -175,7 +175,7 @@ public class MLS_MPM_Fluid_Multithreaded : MonoBehaviour {
     [BurstCompile]
     unsafe struct Job_P2G_1 : IJob {
         public NativeArray<Particle> ps;
-        [ReadOnly] public NativeArray<Cell> grid;
+        public NativeArray<Cell> grid;
         [ReadOnly] public int num_particles;
         
         public void Execute() {
